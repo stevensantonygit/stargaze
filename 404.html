@@ -7,21 +7,64 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    h1 {
+        font-size: 3em;
+        animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 10px white; }
+        to { text-shadow: 0 0 20px cyan; }
+    }
+
+    h2 {
+        font-size: 1.5em;
+        opacity: 0.8;
+    }
+
+    img {
+        width: 900px;
+        height: 550px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 1.2em;
+        color: white;
+        background: rgba(0, 255, 255, 0.5);
+        border: 2px solid cyan;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    .btn:hover {
+        background: cyan;
+        color: black;
+        box-shadow: 0 0 10px cyan;
+    }
+</style>
+</head>
 <body>
-    <div class="starry-bg"></div>
-    <header>
-        <h1>Oops! Page Not Found</h1>
-        <nav>
-            <a href="index.html">Return Home</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Looks like you're lost in space...</h2>
-        <img src="https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaaOMiboSYEjO5NqFOrkatZE9VDTsN_E3SCFO8tR98BlU6hsg4Gn_QyCxp504MwI7H12R-vmBgWsImMcp3Z7layXjYFuOmIyb0K6.jpg?r=35b" alt="Lost in space">
-    </main>
-    <footer>
-        <p>&copy; 2025 StarGaze. All Rights Reserved.</p>
-    </footer>
+<div class="starry-bg"></div>
+<header>
+    <h1>Oops! Page Not Found</h1>
+</header>
+<main>
+    <h2>Looks like you're lost in space...</h2>
+    <img src="https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaaOMiboSYEjO5NqFOrkatZE9VDTsN_E3SCFO8tR98BlU6hsg4Gn_QyCxp504MwI7H12R-vmBgWsImMcp3Z7layXjYFuOmIyb0K6.jpg?r=35b" alt="Lost in space">
+    <br>
+    <a href="index.html" class="btn">Return Home</a>
+</main>
+<footer>
+    <p>&copy; 2025 StarGaze. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
 <!--The End!-->

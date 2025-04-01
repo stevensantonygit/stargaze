@@ -7,38 +7,113 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .gallery-item img {
+        width: 100%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+    .caption {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .gallery-item:hover .caption {
+        opacity: 1;
+    }
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+    .lightbox:target {
+        display: flex;
+    }
+</style>
+</head>
 <body>
-    <div class="starry-bg"></div>
-    <header>
-        <h1>StarGaze Gallery</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section class="about-section">
-            <h2>Celestial Gallery</h2>
-            <p>Discover breathtaking images of galaxies, nebulae, and planets captured from the depths of space.</p>
-        </section>
+<div class="starry-bg"></div>
+<header>
+    <h1>StarGaze Gallery</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+<main>
+    <section class="about-section">
+        <h2>Celestial Gallery</h2>
+        <p>Discover breathtaking images of galaxies, nebulae, and planets captured from the depths of space.</p>
+    </section>
+    <h2>Explore the Universe in Pictures</h2>
+    <div class="gallery">
+        <a href="#img1" class="gallery-item">
+            <img src="https://www.astronomy.com/uploads/2023/08/JWST-NIRCam-image.jpg" alt="Nebula">
+            <div class="caption">Nebula - A Stellar Nursery</div>
+        </a>
+        <a href="#img2" class="gallery-item">
+            <img src="https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2016/04/mars-2030-virtual-reality-7.jpg" alt="Mars Surface">
+            <div class="caption">Mars Surface - The Red Planet</div>
+        </a>
+        <a href="#img3" class="gallery-item">
+            <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/06/PIA16695_large.jpg?w=1920&h=1080&fit=clip&crop=faces%2Cfocalpoint" alt="Black Hole">
+            <div class="caption">Black Hole - A Cosmic Mystery</div>
+        </a>
+    </div>
+</main>
 
-        <h2>Explore the Universe in Pictures</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://www.astronomy.com/uploads/2023/08/JWST-NIRCam-image.jpg" alt="Nebula">
-            </div>
-            <div class="gallery-item">
-                <img src="https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2016/04/mars-2030-virtual-reality-7.jpg" alt="Mars Surface">
-            </div>
-            <div class="gallery-item">
-                <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/06/PIA16695_large.jpg?w=1920&h=1080&fit=clip&crop=faces%2Cfocalpoint" alt="Black Hole">
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 StarGaze. All Rights Reserved.</p>
-    </footer>
+<div id="img1" class="lightbox">
+    <img src="https://www.astronomy.com/uploads/2023/08/JWST-NIRCam-image.jpg" alt="Nebula">
+</div>
+<div id="img2" class="lightbox">
+    <img src="https://roadtovrlive-5ea0.kxcdn.com/wp-content/uploads/2016/04/mars-2030-virtual-reality-7.jpg" alt="Mars Surface">
+</div>
+<div id="img3" class="lightbox">
+    <img src="https://assets.science.nasa.gov/dynamicimage/assets/science/psd/solar/2023/06/PIA16695_large.jpg?w=1920&h=1080&fit=clip&crop=faces%2Cfocalpoint" alt="Black Hole">
+</div>
+
+<footer>
+    <p>&copy; 2025 StarGaze. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
 <!--The End!-->
