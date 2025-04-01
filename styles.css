@@ -103,4 +103,29 @@ nav a:hover, button:hover {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-section h2 {
+    color: #00d4ff;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.quote {
+    font-style: italic;
+    color: #ff00ff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
 /* The End! */
