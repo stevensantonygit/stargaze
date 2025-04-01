@@ -243,4 +243,45 @@ nav a:hover, button:hover {
     from { transform: rotate(0deg) translateX(50px); }
     to { transform: rotate(360deg) translateX(50px); }
 }
+
+.loading-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orbit {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.star {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    animation: orbit 2s linear infinite;
+}
+
+.star:nth-child(1) { top: 0; left: 50%; animation-duration: 2s; }
+.star:nth-child(2) { top: 50%; left: 0; animation-duration: 2.5s; }
+.star:nth-child(3) { bottom: 0; left: 50%; animation-duration: 3s; }
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+
+.loading-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
 /* The End! */
